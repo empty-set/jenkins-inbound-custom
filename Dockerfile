@@ -22,6 +22,7 @@ RUN apt-get update
 #RUN  apt-get install mono-complete -y
 RUN  apt-get install apt-utils  -y
 RUN  apt-get install libicu63  -y
+RUN  apt-get install helm
 USER jenkins
 
 RUN mkdir gitversion && curl -L https://github.com/GitTools/GitVersion/releases/download/5.3.7/gitversion-ubuntu.18.04-x64-5.3.7.tar.gz | tar xz -C gitversion
