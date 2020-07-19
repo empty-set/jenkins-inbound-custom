@@ -24,9 +24,9 @@ RUN  apt-get install apt-utils  -y
 RUN  apt-get install libicu63  -y
 
 # install help
-RUN curl https://helm.baltorepo.com/organization/signing.asc | sudo apt-key add -
-RUN sudo apt-get install apt-transport-https --yes
-RUN echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+RUN curl https://helm.baltorepo.com/organization/signing.asc | apt-key add -
+RUN apt-get install apt-transport-https --yes
+RUN echo "deb https://baltocdn.com/helm/stable/debian/ all main" | tee /etc/apt/sources.list.d/helm-stable-debian.list
 RUN apt-get update
 RUN apt-get install helm
 USER jenkins
